@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: datadir-mysql-0
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 2Gi
+  hostPath:
+    path: /tmp/galera/storage01/
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: datadir-mysql-1
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 2Gi
+  hostPath:
+    path: /tmp/galera/storage02/
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: datadir-mysql-2
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 2Gi
+  hostPath:
+    path: /tmp/galera/storage03/
+    
